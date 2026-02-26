@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="exam-container">
+    <!-- top header -->
+    <header class="glass-header">
+      <div class="logo-area">Exam Detector</div>
+      <div class="student-meta">Alex Chen · Midterm Assessment</div>
+      <div class="timer" id="timerDisplay">10:00</div>
+      <div class="live-risk">
+        <span class="risk-badge" id="headerRiskBadge">Safe</span>
+        <span class="risk-score" id="headerRiskScore">0</span>
+      </div>
+    </header>
+
+    <div class="main-panel">
+      <section class="exam-section glass-card" id="examSection">
+        <div class="question-header">
+          <span id="subjectLabel">Mathematics</span>
+          <span id="questionCounter">1 / 10</span>
+        </div>
+        <div class="question-text" id="questionText">Loading question ...</div>
+        
+    
+        <!-- <div class="question-type-selector">
+          <label class="type-option">
+            <input type="radio" name="questionType" value="mcq" checked> Multiple Choice
+          </label>
+          <label class="type-option">
+            <input type="radio" name="questionType" value="text"> Text Input
+          </label>
+        </div> -->
+
+        <div id="optionsContainer" class="options"></div>
+        
+        <div class="nav-controls">
+          <button class="sec-btn" id="prevBtn" disabled>← Previous</button>
+          <button class="prim-btn" id="nextBtn">Next →</button>
+        </div>
+        <div class="submit-area" id="submitBtnContainer" style="display: none;">
+          <button class="submit-btn" id="submitExamBtn">Submit Assessment</button>
+        </div>
+      </section>
+
+
+      <aside class="monitor-panel glass-card">
+        <h3>Live monitor</h3>
+        <div class="meter-section">
+          <div class="risk-value">
+            <span class="label">risk score</span>
+            <span class="big-risk" id="liveRiskScore">0</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-fill" id="riskProgress" style="width:0%"></div>
+          </div>
+          <div class="level-badge" id="liveRiskLevel">Safe</div>
+        </div>
+
+        <div class="event-log">
+          <h4>Event log</h4>
+          <ul id="eventLogList">
+            <li>Monitoring active</li>
+          </ul>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item">tab switches <span id="statTab">0</span></div>
+          <div class="stat-item">paste attempts <span id="statPaste">0</span></div>
+          <div class="stat-item">idle events <span id="statIdle">0</span></div>
+          <div class="stat-item">typing bursts <span id="statBurst">0</span></div>
+        </div>
+      </aside>
+    </div>
+
+  
+    <div id="lockdownOverlay" class="lockdown-mode hidden">
+      <div class="lockdown-content">
+        <h2>Academic Integrity Violation Detected</h2>
+        <p>excessive tab switches · exam frozen</p>
+        <form id="unlockForm">
+          <input type="email" placeholder="teacher@university.com" id="unlockEmail" value="teacher@university.com">
+          <input type="password" placeholder="password" id="unlockPassword">
+          <button type="submit" class="unlock-btn">unlock exam</button>
+          <div class="shake-area" id="formError"></div>
+        </form>
+      </div>
+    </div>
+
+  
+    <div id="reportOverlay" class="report-panel hidden">
+      <div class="report-card glass-card">
+        <h2>📋 final integrity report</h2>
+        <div class="report-row"><span>total score</span><span id="reportScore">0</span></div>
+        <div class="report-row"><span>risk level</span><span id="reportLevel">Safe</span></div>
+        <div class="report-row"><span>cheating likelihood</span><span id="reportLikelihood">Very Low</span></div>
+        <div class="report-divider"></div>
+        <div class="report-row"><span>tab switches</span><span id="reportTab">0</span></div>
+        <div class="report-row"><span>paste attempts</span><span id="reportPaste">0</span></div>
+        <div class="report-row"><span>idle events</span><span id="reportIdle">0</span></div>
+        <div class="report-row"><span>typing bursts</span><span id="reportBurst">0</span></div>
+        <p class="summary" id="reportSummary">monitoring complete</p>
+        <button class="prim-btn" id="closeReportBtn">understood</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="alarmAudio" loop style="display:none;">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+  </audio>
+
+ 
+  <script src="risk.js"></script>
+  <script src="track.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
