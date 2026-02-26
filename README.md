@@ -1,52 +1,98 @@
-Cheating Detector - Academic Integrity Monitoring System
-A comprehensive web-based examination platform with real-time behavioral monitoring and academic integrity violation detection. This system tracks suspicious activities during online assessments and provides risk analysis.
+#  Cheating Detector  
+### Academic Integrity Monitoring System
 
-Features
-Exam Interface
-Dynamic Question Navigation: Previous/Next buttons with progress tracking
+A comprehensive web-based examination platform with **real-time behavioral monitoring** and **academic integrity violation detection**.
 
-Multiple Question Types: Support for Multiple Choice Questions (MCQ) and Text Input answers
+This system tracks suspicious activities during online assessments and dynamically generates a **risk analysis report**.
 
-Timer: 10-minute countdown timer with visual urgency indicators
+---
 
-Subject Labeling: Questions categorized by subject (Mathematics/Science)
+## Default Credentials (Testing Only)
 
-Integrity Monitoring
-Real-time Risk Score: Dynamic scoring system (0-100) based on suspicious activities
+**Teacher Email:** `teacher@university.com`  
+**Password:** `adminsecure`
 
-Live Risk Level Indicators: Safe → Warning → Suspicious → High Risk
+---
 
-Event Logging: Timestamped record of all detected violations
+## Features
 
-Statistics Dashboard: Tracks tab switches, paste attempts, idle time, and typing bursts
+### Exam Interface
 
-Violation Detection
-Tab Switching Detection: Monitors when user leaves the exam window
+- **Dynamic Question Navigation**  
+  Previous / Next buttons with progress tracking
 
-Copy/Paste Prevention: Detects and logs copy/paste attempts
+- **Multiple Question Types**  
+  Support for *Multiple Choice Questions (MCQ)* and text input answers
 
-Right-click Blocking: Prevents context menu access
+- **Countdown Timer**  
+  10-minute timer with visual urgency indicators
 
-Developer Tools Detection: Blocks F12, Ctrl+Shift+I, Ctrl+U
+- **Subject Labeling**  
+  Questions categorized by **Mathematics** and **Science**
 
-Idle Time Detection: Flags extended periods of inactivity
+---
 
-Typing Burst Analysis: Detects rapid typing patterns
+## Integrity Monitoring
 
-Fullscreen Exit Monitoring: Alerts when user exits fullscreen mode
+- **Real-time Risk Score**  
+  Dynamic scoring system (0–100) based on suspicious behavior
 
-Screenshot Attempt Detection: Captures Print Screen key usage
+- **Live Risk Level Indicators**  
+  `Safe → Warning → Suspicious → High Risk`
 
-Security Features
-Auto-Lockdown: Triggers after 3 tab switches
+- **Event Logging**  
+  Timestamped record of detected violations
 
-Unlock Mechanism: Teacher authentication to resume exam
+- **Statistics Dashboard**
+  - Tab switches  
+  - Paste attempts  
+  - Idle incidents  
+  - Typing bursts  
 
-Audio Alarm: Plays during lockdown mode
+---
 
-Fullscreen Enforcement: Attempts to force fullscreen mode
+## Violation Detection
 
-Default Credentials (for testing)
-Teacher Email: teacher@university.com
+- **Tab Switching Detection**  
+  Monitors when the user leaves the exam window
 
-Password: adminsecure
+- **Copy / Paste Prevention**  
+  Detects and logs copy-paste attempts
+
+- **Right-click Blocking**  
+  Prevents context menu access
+
+- **Developer Tools Detection**  
+  Blocks:
+  - `F12`
+  - `Ctrl + Shift + I`
+  - `Ctrl + U`
+
+- **Idle Time Detection**  
+  Flags extended inactivity (60+ seconds)
+
+- **Typing Burst Analysis**  
+  Detects rapid abnormal typing behavior
+
+- **Fullscreen Exit Monitoring**  
+  Alerts when fullscreen mode is exited
+
+- **Screenshot Attempt Detection**  
+  Detects `Print Screen` usage
+
+---
+
+## Security Features
+
+- **Auto-Lockdown Mode**  
+  Triggers after 3 tab switches
+
+- **Teacher Unlock Mechanism**  
+  Authentication required to resume the exam
+
+- **Audio Alarm System**  
+  Activated during lockdown mode
+
+- **Fullscreen Enforcement**  
+  Forces fullscreen during examination
+
